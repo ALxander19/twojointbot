@@ -2,10 +2,10 @@
 
 <launch>
   <!-- Launch Gazebo  -->
-  <include file="$(find lab2)/launch/robot_gazebo.launch" />
+  <include file="$(find twojointbot)/launch/robot_gazebo.launch" />
 
   <!-- Joint controller configurations from YAML to parameter server -->
-  <rosparam file="$(find lab2)/config/robot_control.yaml" command="load"/>
+  <rosparam file="$(find twojointbot)/config/robot_control.yaml" command="load"/>
 
   <!-- Load the controllers -->
   <node name="controller_spawner" pkg="controller_manager" type="spawner"
